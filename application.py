@@ -10,7 +10,7 @@ from flask_migrate import Migrate
 from app import create_app, db, organization_data
 from app.models import User, Role
 
-app = create_app(os.getenv('FLASK_CONFIG') or 'default')
+application = app = create_app(os.getenv('FLASK_CONFIG') or 'default')
 migrate = Migrate(app, db)
 
 @app.shell_context_processor
